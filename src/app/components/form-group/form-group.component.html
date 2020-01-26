@@ -1,0 +1,26 @@
+  <table [formGroup]="contactForm">
+	<tr>
+		<td>First Name:</td>
+		<td></td>
+		<td><input type="text" name="fName"  formControlName="firstName">
+			{{contactForm.get('firstName').value}}
+		</td>
+	</tr>
+	<tr>
+		<td>Last Name:</td>
+		<td></td>
+		<td><input type="text" name="lName" formControlName="lastName">
+		</td>
+	</tr>
+	<tr>
+		<td>Email:</td>
+		<td></td>
+		<td><input type="email" name="eml"  formControlName="email">
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<button type="submit" [disabled]="!contactForm.valid">Submit</button>
+		</td>
+	</tr>
+  </table>  
